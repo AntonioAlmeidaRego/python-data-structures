@@ -45,7 +45,7 @@ class Stack:
         self._syrup.set_ant(aux2);
         del aux;
 
-    def last(self):
+    def back(self):
         return self._head.get_prox();
 
     def top(self):

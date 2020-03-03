@@ -9,5 +9,4 @@ stack.push(74, 5);
 stack.push(96, 6);
 stack.push(32, 7);
 stack.push(99, 8);
-stack.printSt();
-print(stack.size());
+stack.printSt(); 
