@@ -10,4 +10,4 @@ queue.enqueue(74, 6);
 queue.dequeue();
 queue.dequeue();
 queue.dequeue();
-queue.printQe();
+queue.printQe(); 
