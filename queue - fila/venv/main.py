@@ -1,6 +1,6 @@
-from QueuePy import QueuePy
+from Queue import Queue;
 
-queue = QueuePy();
+queue = Queue();
 queue.enqueue(25, 1);
 queue.enqueue(30, 2);
 queue.enqueue(10, 3);

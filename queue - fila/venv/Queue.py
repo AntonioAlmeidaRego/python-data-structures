@@ -1,8 +1,8 @@
 from Node import Node
 
-class QueuePy:
+class Queue:
 
-    def __int__(self):
+    def __init__(self):
         self.head = Node();
         self.syrup = Node();
         self.head.set_prox(self.syrup);
@@ -42,5 +42,4 @@ class QueuePy:
         aux = self.head.get_prox();
         while(aux != self.syrup):
             print(aux.get_value(), " ");
-            aux = aux.get_prox();
-        print("OLa Mundo!");
+            aux = aux.get_prox(); 
