@@ -76,12 +76,7 @@ class Deque:
         return self._head.get_prox();
 
     def printDq(self):
-        aux = self._head.get_prox();
-        str = "";
+        aux = self._head.get_prox(); 
         while(aux != self._syrup):
-            if(aux != self._syrup.get_ant()):
-                str += aux.get_value() + ", ";
-            else:
-                str += aux.get_value();
+            print(aux.get_value());
             aux = aux.get_prox();
-        print(str);
