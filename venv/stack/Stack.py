@@ -1,5 +1,5 @@
-
 from Node import Node
+
 
 class Stack:
     def __init__(self):
@@ -15,7 +15,7 @@ class Stack:
         return self._length
 
     def __empty__(self):
-        if(self._head.__get_prox__() == self._syrup):
+        if (self._head.__get_prox__() == self._syrup):
             return True
         return False
 
@@ -31,8 +31,8 @@ class Stack:
     def __search__(self, value):
         node = self._syrup.__get_ant__()
 
-        while(node != self._head):
-            if(node.__get_value__() == value):
+        while (node != self._head):
+            if (node.__get_value__() == value):
                 return node
             node = node.__get_ant__()
 
@@ -53,7 +53,7 @@ class Stack:
         novo.__set_key__(key)
         novo.__set_value__(value)
         self._length = self._length + 1
-        if(self.__empty__()):
+        if (self.__empty__()):
             self._head.__set_prox__(novo)
             novo.__set_ant__(self._head)
             novo.__set_prox__(self._syrup)
@@ -94,11 +94,10 @@ class Stack:
             self._length = self._length - 1
             del node
 
-
     def __pop_value_and_key__(self, value, key):
         node = self.__search__(value)
         if (node != None):
-            if(node.__get_key__() == key):
+            if (node.__get_key__() == key):
                 nodeAnt = node.__get_ant__()
                 nodeProx = node.__get_prox__()
 
@@ -109,7 +108,7 @@ class Stack:
 
     def __pop_key__(self, key):
         node = self.__get_key__(key)
-        if(node != None):
+        if (node != None):
             nodeAnt = node.__get_ant__()
             nodeProx = node.__get_prox__()
 
@@ -126,6 +125,8 @@ class Stack:
 
     def __printSt__(self):
         aux = self._syrup.__get_ant__()
-        while(aux != self._head):
-            print(aux.__get_value__())
+        string = ""
+        while (aux != self._head):
+            string = string + str(aux.__get_value__()) + " "
             aux = aux.__get_ant__()
+        print(string)

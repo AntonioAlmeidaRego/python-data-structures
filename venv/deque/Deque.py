@@ -1,5 +1,6 @@
 from Node import Node
 
+
 class Deque:
 
     def __init__(self):
@@ -12,7 +13,7 @@ class Deque:
         self._length = 0
 
     def __empty__(self):
-        if(self._head.__get_prox__() == self._syrup):
+        if (self._head.__get_prox__() == self._syrup):
             return True
         return False
 
@@ -21,7 +22,7 @@ class Deque:
         novo.__set_value__(value)
         novo.__set_key__(key)
         self._length = self._length + 1
-        if(self.__empty__()):
+        if (self.__empty__()):
             self._head.__set_prox__(novo)
             novo.__set_ant__(self._head)
             novo.__set_prox__(self._syrup)
@@ -140,16 +141,18 @@ class Deque:
 
     def __push_to_key__(self, key, new_value):
         node = self.__get_key__(key)
-        if(node != None):
+        if (node != None):
             node.__set_value__(new_value)
 
     def __push_to_value__(self, value_prev, value_new):
         node = self.__search__(value_prev)
-        if(node != None):
+        if (node != None):
             node.__set_value__(value_new)
 
     def printDq(self):
         aux = self._head.__get_prox__()
-        while(aux != self._syrup):
-            print(aux.__get_value__())
+        string = ""
+        while (aux != self._syrup):
+            string = string + str(aux.__get_value__()) + " "
             aux = aux.__get_prox__()
+        print(string)
